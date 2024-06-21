@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Formulário</h1>
+            <h2 id="descricao">Inscrição para curso de Front-End</h2>
+        </header>
+        <main class="form">
+            <form id="formulario" method="get">
+                <div class="form-group">
+                    <label for="nome_completo" class="label">Nome Completo</label>
+                    <input type="text" name="nome" id="nome_completo" placeholder="Digite seu nome" class="form-control"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" id="labelemail" class="label">E-mail</label>
+                    <input type="email" name="e-mail" id="email" placeholder="Digite seu e-mail" class="form-control"
+                        required>
+                </div>
+                <div class="form-group">
+                    <div class="label-group">
+                        <label for="idade" class="label">Idade</label>
+                        <span class="clue">(opcional)</span>
+                    </div>
+                    <input type="number" name="idade" id="idade" min="15" max="99" placeholder="Idade"
+                        class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="datanascimento">Data de nascimento</label>
+                    <input type="date" name="datanascimento" id="datanascimento" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="escolaridade">Escolaridade</label>
+                    <select name="escolaridade" id="escolaridade" class="form-control" required>
+                        <option disabled selected value>Selecione sua escolaridade</option>
+                        <option value="fundamental">Ensino Fundamental completo</option>
+                        <option value="medio">Ensino Médio completo</option>
+                        <option value="superior">Ensino Superior completo</option>
+                        <option value="pos">Pós-Graduação completa</option>
+                        <option value="mestrado">Mestrado completo</option>
+                        <option value="doutorado">Doutorado completo</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <div class="form-group">
+                        <legend>Estado Civil:</legend>
+                        <div class="label-inline">
+                            <input type="radio" name="civil" id="solteiro" class="input-radio" required>
+                            <label for="solteiro"> Solteiro(a)</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="radio" name="civil" id="casado" class="input-radio" required>
+                            <label for="casado">Casado(a)</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="radio" name="civil" id="separado" class="input-radio" required>
+                            <label for="separado">Separado(a)</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="radio" name="civil" id="divorciado" class="input-radio" required>
+                            <label for="divorciado">Divorciado(a)</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="radio" name="civil" id="viuvo" class="input-radio" required>
+                            <label for="viuvo">Viúvo(a)</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Possui conhecimento prévio em Front-End?</legend>
+                    <div class="form-group">
+                        <div class="label-inline">
+                            <input type="checkbox" name="zero" id="html" class="input-checkbox">
+                            <label for="html">HTML</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="checkbox" name="basico" id="css" class="input-checkbox">
+                            <label for="css">CSS</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="checkbox" name="intermed" id="javascript" class="input-checkbox">
+                            <label for="javascript">JavaScript</label>
+                        </div>
+                        <div class="label-inline">
+                            <input type="checkbox" name="avancado" id="framework" class="input-checkbox">
+                            <label for="framework">Bibliotecas e Frameworks(React.Js, Angular, Vue, etc)</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <label for="bio">Fale um pouco sobre você</label>
+                    <textarea name="bio" id="bio" rows="5" cols="50" placeholder="Fale sobre você aqui..." required
+                        class="input-textarea"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="reset" value="Limpar formulário" id="generico" class="clean">
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Enviar</button>
+                </div>
+            </form>
+        </main>
+        <footer></footer>
+</body>
+
+</html>
